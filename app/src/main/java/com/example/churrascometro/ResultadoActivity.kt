@@ -1,7 +1,7 @@
 package com.example.churrascometro
 
-import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
 
 class ResultadoActivity : AppCompatActivity() {
 
@@ -10,7 +10,6 @@ class ResultadoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resultado)
 
         val dados: Bundle = intent.extras
-        val men = dados.getInt("mens")
-
+        val qtdHomem = dados.getInt("numero")
     }
 }
