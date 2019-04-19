@@ -40,14 +40,14 @@ class ResultadoActivity : AppCompatActivity() {
         farofa = (homens * 100.0) + (mulheres * 80.0)
         paes = (homens * 1.5) + (mulheres * 1.5)
 
-        text_Picanha.setText(picanha.toString())
-        text_Maminha.setText(maminha.toString())
-        text_lingui.setText(linguica.toString())
-        text_frango.setText(frango.toString())
-        text_Arroz.setText(arroz.toString())
-        text_batata.setText(batata.toString())
-        text_farofa.setText(farofa.toString())
-        text_paes.setText(paes.toString())
+        text_Picanha.setText(picanha.toString() + " kg")
+        text_Maminha.setText(maminha.toString() + " kg")
+        text_lingui.setText(linguica.toString() + " kg")
+        text_frango.setText(frango.toString() + " kg")
+        text_Arroz.setText(arroz.toString() + " kg")
+        text_batata.setText(batata.toString() + " kg")
+        text_farofa.setText(farofa.toString() + " kg")
+        text_paes.setText(paes.toString() + " kg")
 
         button_voltar.setOnClickListener {
             finish()
@@ -55,4 +55,5 @@ class ResultadoActivity : AppCompatActivity() {
         }
 
     }
+
 }

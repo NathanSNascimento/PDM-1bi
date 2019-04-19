@@ -15,15 +15,39 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(applicationContext, ResultadoActivity::class.java)
 
-            val qtdHomens = edit_homens.text.toString()
-            val qtdMulheres = edit_mulher.text.toString()
-            val qtdCriancas = edit_Crianca.text.toString()
+            var qtdHomens = edit_homens.text.toString()
+            var qtdMulheres = edit_mulher.text.toString()
+            var qtdCriancas = edit_Crianca.text.toString()
+
+            if(qtdHomens.equals("") && (qtdMulheres.equals("") && (qtdCriancas.equals(""))) ){
+                text_aviso.setText("Informe ao menos um campo. Pois um churrasco sem pessoas terá a mesma " +
+                        "quantidade de ingredientes que você tem de amigos: ZERO.");
+            } else {
+                if(qtdHomens.equals("")){
+                    qtdHomens = 0.toString()
+                }
+                if(qtdMulheres.equals("")) {
+                    qtdMulheres = 0.toString()
+                }
+                if(qtdCriancas.equals("")){
+                    qtdCriancas = 0.toString()
+                }
+            }
 
             intent.putExtra("mens", qtdHomens)
             intent.putExtra("womans", qtdMulheres)
             intent.putExtra("kids", qtdCriancas)
 
-            startActivity(intent)
+            if ((qtdHomens != "") && (qtdMulheres != "") && (qtdCriancas != "")){
+                text_aviso.setText("")
+                startActivity(intent)
+            } else {
+                text_aviso.setText("Informe ao menos um campo. Pois um churrasco sem pessoas terá a mesma " +
+                        "quantidade de ingredientes que você tem de amigos: ZERO.");
+            }
+
+
+
         }
 
     }
