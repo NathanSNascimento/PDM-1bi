@@ -40,14 +40,14 @@ class ResultadoActivity : AppCompatActivity() {
         farofa = (homens * 100.0) + (mulheres * 80.0)
         paes = (homens * 1.5) + (mulheres * 1.5)
 
-        text_Picanha.setText(picanha.toString() + " kg")
-        text_Maminha.setText(maminha.toString() + " kg")
-        text_lingui.setText(linguica.toString() + " kg")
-        text_frango.setText(frango.toString() + " kg")
-        text_Arroz.setText(arroz.toString() + " kg")
-        text_batata.setText(batata.toString() + " kg")
-        text_farofa.setText(farofa.toString() + " kg")
-        text_paes.setText(paes.toString() + " kg")
+        text_Picanha.setText(picanha.toString() + "g")
+        text_Maminha.setText(maminha.toString() + "g")
+        text_lingui.setText(linguica.toString() + "g")
+        text_frango.setText(frango.toString() + "g")
+        text_Arroz.setText(arroz.toString() + "g")
+        text_batata.setText(batata.toString() + "g")
+        text_farofa.setText(farofa.toString() + "g")
+        text_paes.setText(paes.toString() + "g")
 
         button_voltar.setOnClickListener {
             finish()
